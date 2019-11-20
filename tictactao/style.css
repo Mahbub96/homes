@@ -3,6 +3,14 @@ body{
 	text-align:center;
 	color:yellow;	
 }
+#home{
+	float:left;
+}
+a{
+	text-decoration:none;
+}
+#rematch{
+float:right;}
 .wrapper{
 	background:#555;
 	margin:0 auto;
