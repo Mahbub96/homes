@@ -16,6 +16,7 @@ $(document).ready(function(){
 	}
 	//check if game or not
 	i++;
+	if(i == 9) tie();
 	checkWinner(1000);
   });
 });
@@ -43,22 +44,20 @@ function checkWinner(){
 	 $("#p1Score").text("Winner!");
 	 $("#p2Score").text("Don't worry ! Try again later ");
 	 $("#turn").hide();
-	 $(".game").hide(100);
-	 
+	 $(".col").attr("disabled",true);
  }
  function winnerP2(){
 	 $("#p2Score").text("Winner");
 	 $("#p1Score").text("Don't Worry,Try again later.");
 	 $("#turn").hide();
-	 $(".game").hide(100);
-	 
+	 $(".col").attr("disabled",true);
+ }
+ function tie(){
+	 $("#p2Score").text("Draw ! ");
+	 $("#p1Score").text("Draw ! ");
+	 $("#turn").hide();
  }
 $("#rematch").click(function(){
 	 var check = confirm("Really want to Restart?");
 	 if(check) location.reload();
  });
- 
-	 
-
-
-
