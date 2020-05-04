@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+    <title>Simple demo calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+            <span class="logo">@Mahbub</span>
+            <span>
+                <div class="ac" onclick="ac()">AC</div>
+            </span>
+            <div class="display">
+                <div id="d">
+                    <script src="show.js"></script>
+                </div>
+            </div>
+		</div>
+		
+		<div class="body">
+			<div class="buttons">
+				<div class="number"><script src="button.js"></script></div>
+				<div class="operator">
+					<div class="button" id="add" onclick="add()" >+</div>
+					<div class="button " id="minus" onclick="minus()">-</div>
+					<div class="button " id="times" onclick="times()">*</div>
+					<div class="button " id="div" onclick="div()">/</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
