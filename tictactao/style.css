@@ -1,47 +1,38 @@
-body{
-	background:#333;
-	text-align:center;
-	color:yellow;	
+* {
+  margin: 0;
+  padding: 0;
 }
-#home{
-	float:left;
+
+.container {
+  width: 325px;
+  height: 325px;
+  display: block;
+  margin: 100px auto;
+  border: 1px solid black;
+  padding: 13px 0 0 13px;
 }
-a{
-	text-decoration:none;
+
+.container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  float: left;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
-#rematch{
-float:right;}
-.wrapper{
-	background:#555;
-	margin:0 auto;
-	width : 80%;
-	text-align:center;
+.container .btn:nth-child(1),
+.container .btn:nth-child(4),
+.container .btn:nth-child(7) {
+  border-left: none;
 }
-.top{
-	width:360px;
-	height:120px;
-	margin:0 auto;
-	text-align:center;
+
+.container .btn:nth-child(7),
+.container .btn:nth-child(8),
+.container .btn:nth-child(9) {
+  border-bottom: none;
 }
-.Right{
-	float:right;
-}
-.left{
-	float:left;
-}
-.game{
-	background:pink;
-	width:360px;
-	height:360px;
-	margin:0 auto;
-}
-.col{
-	background:hotpink;
-	width:100px;
-	height:100px;
-	margin:10px;
-	float:left;
-	font-size:80px;
-	text-align:center;
-	color:black;
-}	
