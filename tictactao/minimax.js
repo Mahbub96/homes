@@ -15,13 +15,12 @@ let scores = {
 
 const AI_functionalities_Main = () =>{
 
-    bestMove();
+    let val = bestMove();
     prints(board);
-
+    finalDecision(val);
 }
 const bestMove = () =>{
     // AI to make its turn 
-    let finalScore;
     let move;
     let bestScore = -Infinity;
 
@@ -32,23 +31,23 @@ const bestMove = () =>{
             if(board[i][j] == ''){
 
                 board[i][j] = ai;
-                let score = minimax(board,0,false);
+                let score = minimax(board,false);
                 board[i][j] = '';
                 if(score > bestScore){
                     bestScore = score;
                     move = {i,j};
                 }
+                
             }  
 
         }
                
     }
     board[move.i][move.j] = ai;
-    console.log(bestScore);
-
+    return bestScore;
 }
 
-const minimax = (board,depth,isMaximizer) =>{
+const minimax = (board,isMaximizer) =>{
     let result = checkWinner();
     
     if(result != null){
@@ -62,21 +61,22 @@ const minimax = (board,depth,isMaximizer) =>{
             for(let j = 0; j < 3; j++){
                 if(board[i][j] == ''){
                     board[i][j] = ai;
-                    let score = minimax(board,depth+1,false);
+                    let score = minimax(board,false);
                     board[i][j] = '';
                     bestScore = Math.max(score,bestScore);
                 }
             }
         }
         return bestScore;
-    }else{
+    }
+    else{
         let bestScore = Infinity;
 
         for(let i = 0; i < 3; i++){
             for(let j = 0; j < 3; j++){
                 if(board[i][j] == ''){
                     board[i][j] = human;
-                    let score = minimax(board,depth+1,true);
+                    let score = minimax(board,true);
                     board[i][j] = '';
                     bestScore = Math.min(score,bestScore);
                 }
@@ -136,7 +136,8 @@ const checkWinner = () => {
             }
         }
     }
-    
+
+    // console.log("times");
     if(winner == null && openSpot == 0){
         return 'tie';
     }
