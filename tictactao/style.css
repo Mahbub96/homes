@@ -3,16 +3,17 @@
   padding: 0;
 }
 
-.container {
+.game__container {
   width: 325px;
   height: 325px;
   display: block;
   margin: 100px auto;
   border: 1px solid black;
   padding: 13px 0 0 13px;
+  margin-bottom: 30px;
 }
 
-.container .btn {
+.game__container .btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,14 +26,38 @@
   border-left: 1px solid black;
   border-bottom: 1px solid black;
 }
-.container .btn:nth-child(1),
-.container .btn:nth-child(4),
-.container .btn:nth-child(7) {
+.game__container .btn:nth-child(1),
+.game__container .btn:nth-child(4),
+.game__container .btn:nth-child(7) {
   border-left: none;
 }
 
-.container .btn:nth-child(7),
-.container .btn:nth-child(8),
-.container .btn:nth-child(9) {
+.game__container .btn:nth-child(7),
+.game__container .btn:nth-child(8),
+.game__container .btn:nth-child(9) {
   border-bottom: none;
+}
+
+/* Results section  */
+#display {
+  width: 325px;
+  display: none;
+  margin: 20px auto;
+  border: 1px solid black;
+  padding: 20px;
+  height: 80px;
+}
+#display #result {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  padding-bottom: 20px;
+}
+#display .left {
+  float: left;
+  padding: 10px;
+}
+#display .right {
+  padding: 10px;
+  float: right;
 }
