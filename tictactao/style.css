@@ -38,7 +38,7 @@
   border-bottom: none;
 }
 
-/* Results section  */
+
 #display {
   width: 325px;
   display: none;
@@ -60,4 +60,5 @@
 #display .right {
   padding: 10px;
   float: right;
+  
 }
